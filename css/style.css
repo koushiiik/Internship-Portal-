@@ -214,6 +214,7 @@ ul {
 .page-content {
   padding: 30px;
   flex: 1;
+  overflow-x: hidden;
 }
 
 .card {
@@ -315,7 +316,7 @@ ul {
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   margin-bottom: 30px;
 }
@@ -541,7 +542,7 @@ ul {
 
 .internship-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
 }
 
@@ -596,6 +597,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .btn-icon {
@@ -801,6 +803,10 @@ hr {
     display: block;
   }
 
+  .page-content {
+    padding: 20px;
+  }
+
   .dashboard-grid,
   .profile-grid {
     grid-template-columns: 1fr;
@@ -977,6 +983,16 @@ hr {
   .login-card {
     padding: 30px 20px;
   }
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .profile-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .page-content {
+    padding: 15px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -991,5 +1007,25 @@ hr {
   }
   .page-title {
     font-size: 1.1rem;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .filter-buttons {
+    flex-wrap: wrap;
+  }
+  .filter-buttons .btn {
+    flex: 1 1 calc(50% - 5px);
+  }
+  .internship-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .internship-action {
+    width: 100%;
+  }
+  .internship-action .btn {
+    width: 100%;
   }
 }
